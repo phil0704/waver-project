@@ -14,7 +14,9 @@ class CreateWavesTable extends Migration
     public function up()
     {
         Schema::create('waves', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id');
+            $table->string('message');
             $table->timestamps();
         });
     }
