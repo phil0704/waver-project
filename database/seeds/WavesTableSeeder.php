@@ -18,7 +18,8 @@ class WavesTableSeeder extends Seeder
         foreach( range( 1, 25 ) as $index ) {
             DB::table( 'waves' )->insert( array(
                 'user_id' => $faker->numberBetween($min = 1, $max = 5),
-                'message' => $faker->catchphrase
+                'message' => $faker->catchphrase,
+                'created_at' => $faker->dateTime()
             ));
         }
     }

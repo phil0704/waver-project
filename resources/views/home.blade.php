@@ -16,12 +16,13 @@
 <hr>
                 <div class="card-body">
               <!-- Waves came from the DB name and the message came from waves message! -->
-                @foreach($waves as $waves)
-                {{ $waves->message }}
-                @endforeach
+                @foreach($waves as $wave)
+                {{ $wave->message }}
+               
                 <br>
-                <small>{{ $waves->created_at }}</small>
+                <small>{{ date('d/m/Y', strtotime($wave->created_at)) }}</small>
                 <hr>
+                @endforeach
               <!--  Posts -->
                 </div>
             </div>

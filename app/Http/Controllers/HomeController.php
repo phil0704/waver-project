@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request; 
+use Illuminate\Http\Request;
 /* 
 * You need to add this support\facades\DB to read your DB!
 */
 use Illuminate\Support\Facades\DB;
+
 use Auth;
 
 class HomeController extends Controller
@@ -29,7 +30,7 @@ class HomeController extends Controller
     public function index()
     {
        $waves = DB::table('waves')->where('user_id', 1)->get();
-       // $waves = Auth::user()->waves;
+       //$waves = Auth::user()->waves;
        
         /*
         * The name waves came from my DB name!
