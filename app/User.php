@@ -28,6 +28,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+   /* function waves() {
+        return $this->hasMany('App\Wave');
+    }
+
     /**
      * The attributes that should be cast to native types.
      *

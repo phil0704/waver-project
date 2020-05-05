@@ -15,7 +15,14 @@
                 </div>
 <hr>
                 <div class="card-body">
-                Posts
+              <!-- Waves came from the DB name and the message came from waves message! -->
+                @foreach($waves as $waves)
+                {{ $waves->message }}
+                @endforeach
+                <br>
+                <small>{{ $waves->created_at }}</small>
+                <hr>
+              <!--  Posts -->
                 </div>
             </div>
         </div>
