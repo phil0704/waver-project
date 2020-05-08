@@ -21,6 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('users', 'HomeController@user')->name('users');
-
-// Route::resources('waves', 'WaveController');
+Route::get('/u/{user}', 'ProfileController@index');

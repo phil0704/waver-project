@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 * You need to add this support\facades\DB to read your DB!
 */
 use Illuminate\Support\Facades\DB;
-
-use Auth;
+use App\Wave;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -29,7 +29,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-       $waves = DB::table('waves')->where('user_id', 1)->get();
+      // $following = Auth::user()->following->pluck('id');
+       //$waves = Wave::whereIn('user_id', $following)->orWhere('user_id', Auth::user()->id)->get();
+        
+      $waves = DB::table('waves')->where('user_id', 1)->get();
        //$waves = Auth::user()->waves;
        
         /*

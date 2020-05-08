@@ -10,15 +10,18 @@ use Illuminate\Notifications\Notification;
 class NewFollower extends Notification
 {
     use Queueable;
+    
+    public function $user;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
         //
+        $this->user = $user;
     }
 
     /**
@@ -29,7 +32,7 @@ class NewFollower extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
 
     /**
@@ -38,12 +41,12 @@ class NewFollower extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
+    public function toDatabase($notifiable)
     {
-        return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+        return [
+            'user_id' => $this->user->id,
+            'user_name' => $this->user->name
+        ];
     }
 
     /**
