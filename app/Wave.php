@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Wave extends Model
 {
@@ -18,6 +19,7 @@ class Wave extends Model
     
     protected $fillable = array(
         'wave',
+        'picture',
         'likes_count',
         'comments_count',
         'posted_at'
@@ -30,7 +32,7 @@ class Wave extends Model
 
     public function comments()
     {
-        return $this->hasMany(Comment::class)->whereNull('parent_id');
+        return $this->hasMany('App\Comment', 'commentable')->whereNull('parent_id');
     }
 
     public function likes()

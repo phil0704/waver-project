@@ -22,3 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/u/{user}', 'ProfileController@index');
+Route::get('profile/{id}', 'ProfileController@showWave');
+Route::get('wave/{id}', 'WaveController@showProfile');
+
+Route::resource('waves', 'WaveController');
+Route::resource('comments', 'CommentController');
+Route::resource('profiles', 'ProfileController');
+
+Route::post('/comment/store', 'CommentController@store')->name('comment.add');
+Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');

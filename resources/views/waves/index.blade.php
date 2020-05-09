@@ -2,7 +2,7 @@
 
 
 @section('title')
-Wavers
+Waver
 @endsection
 
 @section('content')
