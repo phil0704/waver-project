@@ -16,7 +16,7 @@ View Wave
 
                     <strong>Username</strong>
                     <br>
-                    {{ $profile->username ?? '' }}
+                    {{ $user->name ?? '' }}
                     <br>
                     <strong>Wave</strong>
                     <br>

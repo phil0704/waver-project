@@ -21,12 +21,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('users', 'HomeController@users')->name('users');
-Route::get('user/{id}', 'HomeController@user')->name('user.view');
+Route::get('user/{id}', 'HomeController@user')->name('users.view');
 
 
-Route::get('/u/{user}', 'ProfileController@index');
-Route::get('profile/{id}', 'ProfileController@showWave');
-Route::get('wave/{id}', 'WaveController@showProfile');
+
+
+
 
 Route::resource('waves', 'WaveController');
 Route::resource('comments', 'CommentController');
@@ -34,7 +34,7 @@ Route::resource('comments', 'CommentController');
 Route::post('/comment/store', 'CommentController@store')->name('comment.add');
 Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 
-Route::post('/follow', 'ProfileController@followOrUnfollowUser');
+Route::post('/follow', 'UserController@followOrUnfollowUser');
 
 Route::get('/y', function() {
     $user = Auth::user();

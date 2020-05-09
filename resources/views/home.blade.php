@@ -17,7 +17,7 @@
                 <div class="card-body">
               <!-- Waves came from the DB name and the message came from waves message! -->
                 @foreach($waves as $wave)
-                <h5><a href="/u/{{ $wave->user->id }}">{{ $wave->user->name }}</a></h5>
+                <h5><a href="{{ route('users.view', $wave->user) }}">{{ $wave->user->name }}</a></h5>
                 {{ $wave->message }}
                
                 <br>

@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 */
 use Illuminate\Support\Facades\DB;
 use App\Wave;
-use Illuminate\Support\Facades\Auth;
+use App\User
+;use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,12 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function user(Request $request, User $user)
+    {
+      return view('profiles.show', $user );
+    }
+
 
     /**
      * Show the application dashboard.

@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UserSeeder::class);
         (new CommentsTableSeeder)->run();
-        (new ProfilesTableSeeder)->run();
+        
         (new UsersTableSeeder)->run();
         (new WavesTableSeeder)->run();
     }
