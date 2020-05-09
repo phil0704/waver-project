@@ -56,6 +56,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Follower')->withTimestamp();
     }
+    
+   /* public function isFollowing($user)
+   * {
+   *    return $this->following()->where('following_id', 'user_id')->count();
+   * }
+   */
 
     public function comments()
     {

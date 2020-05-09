@@ -9,6 +9,7 @@ use App\Profile;
 use App\User;
 use App\Comment;
 use App\Follower;
+use App\Notification\NewFollower;
 
 
 class ProfileController extends Controller
@@ -25,4 +26,21 @@ class ProfileController extends Controller
            // 'waves' => $waves
         ]);
     }
+
+    public function followOrUnfollowUser(Request $request)
+    { 
+       if ($request->follow) {
+        // Follow
+        $user = User::findOrFail($request->user);
+        Auth::user()->following()->attach($user->id);
+        $user->notify(new newFollower(Auth::user()));
+       } else {
+        // Unfollow
+        $user = User::findOrFail($request->user);
+        Auth::user()->following()->detach($user->id);
+       }
+        return redirect('/u/' . $user->id);
+
+    }
+ 
 }

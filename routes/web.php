@@ -31,3 +31,10 @@ Route::resource('profiles', 'ProfileController');
 
 Route::post('/comment/store', 'CommentController@store')->name('comment.add');
 Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
+
+Route::post('/follow', 'ProfileController@followOrUnfollowUser');
+
+Route::get('/y', function() {
+    $user = Auth::user();
+    $user->notify(new Newfollower(User::findOrFail(2)));
+});

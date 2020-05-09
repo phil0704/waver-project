@@ -11,7 +11,11 @@ class NewFollower extends Notification
 {
     use Queueable;
     
-    public function $user;
+    public function user()
+    {
+
+    }
+
 
     /**
      * Create a new notification instance.
