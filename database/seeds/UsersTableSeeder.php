@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
             $user = new user;
             $user->name = $faker->name;
             $user->email = $faker->email;
+            $user->location = $faker->country;
             $user->password = 'password';
             $user->save();
         }

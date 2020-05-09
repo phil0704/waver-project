@@ -22,7 +22,7 @@ class ProfileController extends Controller
      */
     
 
-    public function index($user)
+    public function index(Request $request, $user)
     {
         //$user = DB::table('user')->where('user', 1)->get();
         $user = User::findOrFail($user);
