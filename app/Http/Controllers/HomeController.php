@@ -32,8 +32,9 @@ class HomeController extends Controller
       // $following = Auth::user()->following->pluck('id');
        //$waves = Wave::whereIn('user_id', $following)->orWhere('user_id', Auth::user()->id)->get();
         
-      $waves = DB::table('waves')->where('user_id', 1)->get();
+     // $waves = DB::table('waves')->where('user_id', 1)->get();
        //$waves = Auth::user()->waves;
+       $waves = Wave::all();
        
         /*
         * The name waves came from my DB name!

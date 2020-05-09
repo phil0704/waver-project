@@ -19,14 +19,14 @@ Create Wave Form
                 @csrf <!-- cross site request forgery. A security measure -->
 
                 <label for="content">
-                    <strong> Wave Content: </strong>
+                    <strong>Wave Content</strong>
                     <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
                 </label>
             </div>
 
             <div class="form-group container h-100">
                 <label for="picture">
-                    <strong>Select image to upload:</strong>
+                    <strong>Select image to upload</strong>
                     <br>
                     <input type="file" name="picture" id="picture">
                 </label>

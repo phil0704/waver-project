@@ -8,8 +8,8 @@
                 <div class="card-header">Recent Updates</div>
 
                 <div class="card-body">
-                <form action="" method="post">
-                <textarea name="body" cols="3" class="form-control" placeholder="What's on your mind?"></textarea>
+                <form action="{{ route('waves.create') }}" method="get">
+                <textarea name="message" cols="3" class="form-control" placeholder="What's on your mind?"></textarea>
                 <button type="submit" class="btn btn-primary">Wave!</button>
                 </form>
                 </div>
@@ -17,7 +17,7 @@
                 <div class="card-body">
               <!-- Waves came from the DB name and the message came from waves message! -->
                 @foreach($waves as $wave)
-             
+                <h5>{{ $wave->user->name }}</h5>
                 {{ $wave->message }}
                
                 <br>

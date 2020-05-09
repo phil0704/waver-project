@@ -9,23 +9,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Wave extends Model
 {
     //
-    use SoftDeletes;
+   // use SoftDeletes;
 
     public $timestamps = false;
 
     protected $guarded = [];
-    protected $dates = ['deleted_at'];
+   // protected $dates = ['deleted_at'];
 
     
     protected $fillable = array(
         'wave',
+        'message',
         'picture',
         'likes_count',
         'comments_count',
-        'posted_at'
+        'created_at'
     );
 
-    public function users() 
+    public function user() 
     {
         return $this->belongsTo('App\User');
     }
