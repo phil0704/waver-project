@@ -17,7 +17,7 @@ Profile
                     <br>
                     
                     <figure>
-                        <img class="profilePic" class="rounded" class="img-responsive" src="{{ $profile->picture }}" alt="Profile picture" style="width:40%" />
+                        <img class="profilePic" class="rounded" class="img-responsive" src="{{ $user->picture }}" alt="Profile picture" style="width:40%" />
                     </figure>
 
                     <strong>Profile Name</strong> 

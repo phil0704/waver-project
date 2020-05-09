@@ -25,7 +25,7 @@ class HomeController extends Controller
 
     public function user(Request $request, User $user)
     {
-      return view('profiles.show', $user );
+      return view('profiles.show', compact('user') );
     }
 
 
