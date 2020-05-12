@@ -31,10 +31,10 @@ Waver
 
              
                 <div class="float-right">
-                    @if($follower->followed ?? '') 
+                    @if($follower->following ?? '') 
                     <button><small>Followed</small></button>
                     @else 
-                    <button><small>Not Followed</small></button>
+                    <button><small>Unfollowed</small></button>
 
                     @endif
                 </div>

@@ -20,12 +20,26 @@ Profile
                         <img src="/waver-project/public/images/dennis-pic.jpg" class="profilePic" class="rounded" class="img-responsive" src="{{ $user->picture }}" alt="Profile picture" style="width:40%" />
                     </figure>
 
-                    <strong>Profile Name</strong> 
+                    <strong>Profile Name:</strong> 
                     {{ $user->name }}
 
                     <br>
-                    <strong>Location</strong>
+                    <strong>Location:</strong>
                     <p>{{ $user->location }}</p>
+
+                    <p class="mb-2">
+                    <small>Following:<span class="badge badge-primary">{{ $user->isFollowing($user) }}</span></small>
+                    <small>Followers:<span class="badge badge-primary tl-follower">{{ $user->followedBy($user) }}</span></small>
+                    </p>
+                    <button class="btn btn-info btn-sm action-follow" data-id="{{ $user->id }}"><strong>
+                    @if(auth()->user()->isFollowing($user))
+                    UnFollow
+                    @else
+                    Follow
+                    @endif
+
+
+                    
                 </div>
             </div>
         </div>

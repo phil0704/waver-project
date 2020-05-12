@@ -125,23 +125,12 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        $profile = Profile::findOrFail($id);
+        $user = User::findOrFail($id);
 
-        $wave = Wave::findOrFail($id);
+        $waves = Wave::where('user_id', '=', $id);
 
-        $waves = Wave::query( )
-            ->join( 'users', 'waves.user_id', '=', 'users.id' )
-            ->select( 'waves.id',
-            'users.id as user_id',
-            'users.name',
-            'waves.created_at',
-            'waves.message',
-            'waves.picture',
-            'waves.likes_count',  )
-            ->orderBy('waves.id', 'desc')
-            ->get(); 
 
-        return view ('profiles.show', compact('profile', 'wave', 'waves') );
+        return view ('profiles.show', compact('user', 'waves') );
     }
 
     /**

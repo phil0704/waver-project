@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Follower;
 
 class User extends Authenticatable
 {
@@ -52,16 +53,22 @@ class User extends Authenticatable
        return $this->hasMany('App\Follower')->withTimestamp();
     }
 
-    public function Followings()
+  /*  public function Followings()
     {
-        return $this->hasMany('App\Follower')->withTimestamp();
+        return $this->hasMany('App\Following')->withTimestamp();
     }
-    
-   /* public function isFollowing($user)
-   * {
-   *    return $this->following()->where('following_id', 'user_id')->count();
-   * }
-   */
+    */
+    public function isFollowing(User $user)
+    {
+       return Follower::where('user_id', '=', $user->id)->count();
+    }
+   
+   
+    public function followedBy(User $user)
+    {
+       return Follower::where('following_id', '=', $user->id)->count();
+    }
+   
 
     public function comments()
     {

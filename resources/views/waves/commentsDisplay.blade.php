@@ -8,8 +8,9 @@
         <figure>
             <img src="{{ $comment->content }}">
         </figure>
-        @else
-        <p>{{ $comment->content }}</p>
+        @else 
+    
+        <p class="card-body">>{{ $comment->content }}</p>
         @endif
     </section>
 

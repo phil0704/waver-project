@@ -22,7 +22,7 @@ Edit Wave
 
                 <div class="form-group container h-100">
                     <label for="content">
-                    <strong>Wave Content:</strong>
+                    <strong>Wave Content</strong>
                     <br>
                     <textarea name="content" id="content" cols="30" rows="10">{{ $wave->content }}</textarea>
                     </label>
