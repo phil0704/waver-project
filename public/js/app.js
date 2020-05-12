@@ -2172,10 +2172,68 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Likes.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Applications/MAMP/htdocs/waver-project/resources/js/components/Likes.vue: Unexpected token (19:8)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m    \u001b[32m'liked'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m     ]\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m data\u001b[33m:\u001b[39m ()\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m{\u001b[0m\n\u001b[0m \u001b[90m 21 | \u001b[39m  \u001b[36mreturn\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 22 | \u001b[39m      waveId\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n    at Parser._raise (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:742:17)\n    at Parser.raiseWithData (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:735:17)\n    at Parser.raise (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:729:17)\n    at Parser.unexpected (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:8779:16)\n    at Parser.parseParenAndDistinguishExpression (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:10251:12)\n    at Parser.parseExprAtom (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9969:21)\n    at Parser.parseExprSubscripts (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9624:23)\n    at Parser.parseMaybeUnary (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Parser.parseExprOps (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Parser.parseMaybeConditional (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Parser.parseMaybeAssign (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Parser.parseObjectProperty (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:10534:101)\n    at Parser.parseObjPropValue (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:10559:101)\n    at Parser.parseObjectMember (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:10483:10)\n    at Parser.parseObj (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:10396:25)\n    at Parser.parseExprAtom (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:10017:28)\n    at Parser.parseExprSubscripts (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9624:23)\n    at Parser.parseMaybeUnary (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Parser.parseExprOps (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Parser.parseMaybeConditional (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Parser.parseMaybeAssign (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Parser.parseExportDefaultExpression (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:12306:24)\n    at Parser.parseExport (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:12208:31)\n    at Parser.parseStatementContent (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:11208:27)\n    at Parser.parseStatement (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:11104:17)\n    at Parser.parseBlockOrModuleBlockBody (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:11679:25)\n    at Parser.parseBlockBody (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:11665:10)\n    at Parser.parseTopLevel (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:11035:10)\n    at Parser.parse (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:12671:10)\n    at parse (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/parser/lib/index.js:12722:38)\n    at parser (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Applications/MAMP/htdocs/waver-project/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Likes",
+  props: ['wave', 'liked'],
+  data: function data() {
+    return {
+      isLiked: ''
+    };
+  },
+  mounted: function mounted() {
+    this.isLiked = this.isLike ? true : false;
+  },
+  computed: {
+    isLike: function isLike() {
+      return this.liked;
+    }
+  },
+  methods: {
+    toggleLike: function toggleLike() {
+      if (this.liked) {
+        this.unlike();
+      } else {
+        this.like();
+      }
+    },
+    like: function like(wave) {
+      var _this = this;
+
+      this.text = 'Unlike';
+      axios.wave('/like' + wave).then(function (response) {
+        return _this.isLiked = true;
+      })["catch"](function (response) {
+        return console.log(response.data);
+      });
+    },
+    unLike: function unLike(wave) {
+      var _this2 = this;
+
+      this.text = 'Like';
+      axios.wave('/unlike/ + wave').then(function (response) {
+        return _this2.isLiked = false;
+      })["catch"](function (response) {
+        return console.log(response.data);
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -41094,11 +41152,15 @@ var render = function() {
             on: {
               click: function($event) {
                 $event.preventDefault()
-                return _vm.unLike(_vm.waveId)
+                return _vm.unLike(_vm.wave)
               }
             }
           },
-          [_c("button", { attrs: { type: "submit" } }, [_vm._v("UnLike")])]
+          [
+            _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+              _vm._v("UnLike")
+            ])
+          ]
         )
       : _c(
           "a",
@@ -41107,11 +41169,15 @@ var render = function() {
             on: {
               click: function($event) {
                 $event.preventDefault()
-                return _vm.like(_vm.waveId)
+                return _vm.like(_vm.wave)
               }
             }
           },
-          [_c("button", { attrs: { type: "submit" } }, [_vm._v("Like")])]
+          [
+            _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+              _vm._v("Like")
+            ])
+          ]
         )
   ])
 }
@@ -53656,15 +53722,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************!*\
   !*** ./resources/js/components/Likes.vue ***!
   \*******************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Likes_vue_vue_type_template_id_6cbd033e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Likes.vue?vue&type=template&id=6cbd033e& */ "./resources/js/components/Likes.vue?vue&type=template&id=6cbd033e&");
 /* harmony import */ var _Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Likes.vue?vue&type=script&lang=js& */ "./resources/js/components/Likes.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -53694,15 +53759,13 @@ component.options.__file = "resources/js/components/Likes.vue"
 /*!********************************************************************!*\
   !*** ./resources/js/components/Likes.vue?vue&type=script&lang=js& ***!
   \********************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Likes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Likes.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Likes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

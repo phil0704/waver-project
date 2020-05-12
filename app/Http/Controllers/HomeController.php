@@ -8,8 +8,11 @@ use Illuminate\Http\Request;
 */
 use Illuminate\Support\Facades\DB;
 use App\Wave;
-use App\User
-;use Illuminate\Support\Facades\Auth;
+use App\User;
+use App\Profile;
+use App\Like;
+use App\Comment;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -39,7 +42,7 @@ class HomeController extends Controller
       // $following = Auth::user()->following->pluck('id');
        //$waves = Wave::whereIn('user_id', $following)->orWhere('user_id', Auth::user()->id)->get();
         
-     // $waves = DB::table('waves')->where('user_id', 1)->get();
+       //waves = DB::table('waves')->where('user_id', 1)->get();
        //$waves = Auth::user()->waves;
        $waves = Wave::all();
        

@@ -19,6 +19,7 @@ class CreateWavesTable extends Migration
             $table->string('message');
             $table->string('picture');
             $table->integer('likes_count');
+            $table->boolean('is_gif')->default(false);
             $table->timestamps();
         });
     }
