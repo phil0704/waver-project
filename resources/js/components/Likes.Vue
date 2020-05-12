@@ -1,10 +1,10 @@
 <template>
   <div>
-    <a href="#" v-if="isLiked" @click.prevent="unLike(waveId)">
-            <button type="submit" >UnLike</button>
+    <a href="#" v-if="isLiked" @click.prevent="unLike(wave)">
+            <button class="btn" type="submit" >UnLike</button>
      </a>
-     <a href="#" v-else @click.prevent="like(waveId)">
-            <button type="submit">Like</button>
+     <a href="#" v-else @click.prevent="like(wave)">
+            <button class="btn" type="submit">Like</button>
      </a>                 
 </div>
 </template>
@@ -13,15 +13,14 @@
     export default {
         name: "Likes",
         props: [
-        'wave-id',
+        'wave',
         'liked'
          ],
-     data: ()
-    {
-      return {
-          waveId: '',
-          liked: false
-      }
+     data: function() {
+          return {
+          isLiked: '',
+          
+     };
         },
         mounted() {
             this.isLiked = this.isLike ? true : false;
@@ -29,7 +28,7 @@
         computed: {
             isLike() {
                 return this.liked;
-            },
+            }
         },
         methods: {
              toggleLike: function()
@@ -37,23 +36,23 @@
             if(this.liked) {
             this.unlike()
             } else {
-            this.like()
+            this.like();
             } 
         },
             like(wave) {
                  this.text = 'Unlike';
-                axios.wave('/waves/like/'+waveId)
+                axios.wave('/like' + wave)
                     .then(response => this.isLiked = true)
                     .catch(response => console.log(response.data));
             },
             unLike(wave) {
                  this.text = 'Like';
-                axios.wave('/waves/unlike/'+waveId)
+                axios.wave('/unlike/ + wave')
                     .then(response => this.isLiked = false)
                     .catch(response => console.log(response.data));
             }
         }
-    }
+    };
 </script>
 
 <style>
