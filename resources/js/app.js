@@ -21,6 +21,11 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('Likes', require('./components/Likes.vue').default);
+Vue.component('comment-edit-form', require('./components/CommentEditForm.vue').default);
+Vue.component('comment-create-form', require('./components/CommentCreateForm.vue').default);
+Vue.component('Giphy', require('./components/Giphy.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -30,35 +35,14 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
-});
-
-// init ScrollMagic Controller
-const controller = new ScrollMagic.Controller();
-
-$ (function(){
-    // wait for document ready
-
-const controller = new ScrollMagic.Controller({
-    globalSceneOptions: {
-        triggerHook:'onLeave',
-        druration: "200%" // this works just fine with duration 0 as well
-        // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
-        // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause. 
+    data: {
+        content: ''
+    },
+    methods: {
+        imageCliked(imgSrc)
+        {
+            console.log(imgSrc);
+            this.content = imgSrc;
+        }
     }
 });
-
-// get all slides
-const slides = document.querySelectorAll("section.panel");
-
-// create scene for every slide
-for ( const i = 0; i<slides.length; i++ ) {
-    new ScrollMagic.Scene({
-        triggerElement: slides[i]
-    })
-    .setPin(slides[i], {pushFollowers: False})
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
-  }
-
-});
-

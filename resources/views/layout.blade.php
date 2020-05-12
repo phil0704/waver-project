@@ -9,11 +9,11 @@
                <form action="/follow" method="post"></form>
                @csrf
                <input type="hidden" name="user" value="{{ $user->id }}">
-              
+               @if(Auth::user()->isFollowing($user))
                <input class="btn btn-danger float-right" value="UnFollow" type="submit" name="unfollow">
-               
+               @else
                <input class="btn btn-primary float-right" value="Follow" type="submit" name="follow">
-              
+               @endif
 <hr>
               <div class="card-body">
             <!-- Waves came from the DB name and the message came from waves message!-->
