@@ -17,8 +17,9 @@ class CreateWavesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->string('message');
-            $table->string('picture');
-            $table->integer('likes_count');
+            $table->string('picture')->nullable();
+            $table->integer('likes_count')->default(0);
+            $table->integer('comments_count')->default(0);
             $table->boolean('is_gif')->default(false);
             $table->timestamps();
         });

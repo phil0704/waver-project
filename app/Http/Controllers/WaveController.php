@@ -189,9 +189,11 @@ class WaveController extends Controller
              $wave = new Wave;
              $wave->message = $request->message;
              $wave->user_id = $user->id;
+             $wave->picture = 'picture';
              $wave->save();
+             
 
-             return redirect('/home')->with('success', 'Waves Saved' );
+             return redirect('/home')->with('success', 'Wave has been saved' );
                 
             }
            

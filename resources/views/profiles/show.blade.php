@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('title')
 Profile
@@ -17,7 +17,7 @@ Profile
                     <br>
                     
                     <figure>
-                        <img class="profilePic" class="rounded" class="img-responsive" src="{{ $user->picture }}" alt="Profile picture" style="width:40%" />
+                        <img src="/waver-project/public/images/dennis-pic.jpg" class="profilePic" class="rounded" class="img-responsive" src="{{ $user->picture }}" alt="Profile picture" style="width:40%" />
                     </figure>
 
                     <strong>Profile Name</strong> 
