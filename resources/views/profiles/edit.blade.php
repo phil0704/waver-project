@@ -1,5 +1,6 @@
 @extends('layout')
 
+
 @section('title')
 Edit Profile
 @endsection
@@ -13,20 +14,20 @@ Edit Profile
 <div class="container-fluid">
     <div class="row h-100 justify-content-center align-items-center">
 
-        <form method="post" action="{{ route( 'profiles.store' ) }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route( 'users.store', $user->id ) }}" enctype="multipart/form-data">
         <div class="form-group container h-100">
              @csrf 
 
             <label for="name">
                 <strong>Edit Name</strong>
-                <input type="text" id="username" name="username" value="{{ $profile->username}}">
+                <input type="text" id="username" name="username" value="{{ $user->username}}">
             </label>
         </div>
 
         <div class="form-group container h-100">
             <label for="location">
                 <strong>Location</strong>
-                <textarea class="form-control" name="location" id="location" cols="30" rows="10"> {{ $profile->location }} </textarea>
+                <textarea class="form-control" name="location" id="location" cols="30" rows="10"> {{ $user->location }} </textarea>
             </label>
         </div>
 

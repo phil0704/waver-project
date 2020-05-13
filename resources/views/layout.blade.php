@@ -18,7 +18,7 @@
               <div class="card-body">
             <!-- Waves came from the DB name and the message came from waves message!-->
                 @foreach($user->waves as $wave)
-             <h5>{{ $wave->user()->name }}</h5>
+             <h5>{{ $wave->user->name }}</h5>
                 {{ $wave->message }}
                
                 <br>

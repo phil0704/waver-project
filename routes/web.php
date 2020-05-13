@@ -22,11 +22,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('users', 'HomeController@users')->name('users');
 Route::get('user/{id}', 'ProfileController@show')->name('users.view');
-
-
-
-
-
+Route::get('user/{id}/edit', 'ProfileController@edit')->name('users.edit');
+Route::post('user/{id}/edit', 'ProfileController@store')->name('users.store');
 
 Route::resource('waves', 'WaveController');
 Route::resource('comments', 'CommentController');

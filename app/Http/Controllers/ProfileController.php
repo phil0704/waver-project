@@ -123,12 +123,11 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         $user = User::findOrFail($id);
-
         $waves = Wave::where('user_id', '=', $id);
-
 
         return view ('profiles.show', compact('user', 'waves') );
     }
@@ -143,10 +142,10 @@ class ProfileController extends Controller
     {
         if ( $user = Auth::user() ) {
 
-            $profile = profile::findOrFail($id);
+            $user = User::findOrFail($id);
 
 
-            return view( 'profiles.edit', compact('profile') );
+            return view( 'profiles.edit', compact('user') );
         }
         return redirect('/waves');
     }

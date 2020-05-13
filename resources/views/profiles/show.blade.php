@@ -12,10 +12,6 @@ Profile
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <br>
-                    <br>
-                    <br>
-                    
                     <figure>
                         <img src="/waver-project/public/images/dennis-pic.jpg" class="profilePic" class="rounded" class="img-responsive" src="{{ $user->picture }}" alt="Profile picture" style="width:40%" />
                     </figure>
@@ -37,9 +33,12 @@ Profile
                     @else
                     Follow
                     @endif
-
-
+</button>
                     
+                    @if(auth()->user()->id === $user->id)
+                    <a href="{{ route( 'users.edit', $user->id) }}">Edit Profile</a>
+                    @endif
+
                 </div>
             </div>
         </div>
