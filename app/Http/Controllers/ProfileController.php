@@ -145,7 +145,7 @@ class ProfileController extends Controller
             $user = User::findOrFail($id);
 
 
-            return view( 'profiles.edit', compact('user') );
+            return view( 'profiles.edit', compact('') );
         }
         return redirect('/waves');
     }

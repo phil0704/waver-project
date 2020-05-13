@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="waver logo"  type="company/images" href="{{ URL('/images/connecting-people.jpeg') }}">
-        <title>Waver. Free Social Media</title>
         <meta name="description" content="A Waver app. Connecting to the World!">
+        <title>Waver. Free Social Media</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -13,15 +13,20 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('/css/app.css') }}" >
         <!-- Script -->
         <script type="text/javascript"  src="{{ asset('/js/app.js') }}" defer></script>
-        <script type="text/javascript"  src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
-        <script type="text/javascript"  src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <script type="text/javascript"  src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
         <script type="text/javascript"  src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
         <script type="text/javascript"  src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
          
     </head>
     <body>
-    <div class="flex-center position-ref full-height">
+    <nav class="flex-center position-ref full-height">
+        <figure>
+            <img src="../public/images/waver-icon.png" class="logo">
+        </figure>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -35,37 +40,39 @@
                     @endauth
                 </div>
             @endif
-        </div>
- <div class="main-page">
-<figure>
-     <img src="./images/connecting-people.jpeg" alt="connecting people">
-    <figcaption><i>People around world connecting through Waver</i></figcaption>
-</figure>
-
-    <h3>Welcome to Waver</h3>
-    <p>We Create wonderful experiences for the people, creating memories, making life easier and discover the new ways of life.</p>
-    <br>
-
-    <figure>
-      <img src="./images/family-photo.jpg" alt="family-photo">
-      <figcaption><i>Family always comes first</i></figcaption>
-    </figure>
-    
-    <h4>Waver brings you closer to home!</h4> 
-   
-
-    <figure>
-        <img src="./images/friends-photo.jpeg" alt="friends images">
-    
-        <img src="./images/videocalling.jpg" alt="family videocalling">
-        
-        <img src="./images/family-portrait.jpg" alt="family protrait">
-    </figure>
-    <p>Stay Waver. Stay Connected</p>
-
-</div>
-        <footer>
-            Waver.ConnectingtotheWorld! Registered TM. Copyright 2020
-        </footer>
+       </nav>
+     
+     <header>
+     <h1>Welcome to Waver. Connecting People</h1>
+     </header>
+         <main>
+             <section class="a-waver">
+                <h3>What is all about Waver?</h3> 
+                <p>Waver is a new Social Network that works whenever you are. Waver Create wonderful experiences for the people, creating memories, making life easier and discover the new ways of life.</p>
+                <p>Waver brings you closer to home!</p>
+             </section>
+             <section class="b-waver">
+               <div id="c-waver">
+                 <figure class="col-1">
+                   <img src="./images/connecting-people.jpeg" alt="connecting people">
+                 </figure>
+                 <figure class="col-2">
+                   <img src="./images/family-photo.jpg" alt="family-photo">
+                 </figure>
+                 <figure class="col-3">
+                   <img src="./images/friends-photo.jpeg" alt="friends images">
+                 </figure>
+                 <figure class="col-4">
+                   <img src="./images/videocalling.jpg" alt="family videocalling">
+                 </figure>
+               </div>
+             </section>
+             <section class="c-waver">
+               <p><a href="{{ route('register') }}">Register Now</a>Waver...Connecting People</p>
+             </section>
+        </main>
+     <footer>
+          <p>Waver.ConnectingtotheWorld! Registered TM. Copyright 2020</p> 
+     </footer> 
     </body>
 </html>

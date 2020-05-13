@@ -13,12 +13,12 @@
                <input class="btn btn-danger float-right" value="UnFollow" type="submit" name="unfollow">
               
                <input class="btn btn-primary float-right" value="Follow" type="submit" name="follow">
-               
+               @endif
 <hr>
               <div class="card-body">
             <!-- Waves came from the DB name and the message came from waves message!-->
                 @foreach($user->waves as $wave)
-             <h5>{{ $wave->user->name }}</h5>
+             <h5>{{ $wave->user()->name }}</h5>
                 {{ $wave->message }}
                
                 <br>
