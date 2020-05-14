@@ -25,11 +25,11 @@ class WaveController extends Controller
       
         if ( $user = Auth::user() ) 
         {
-            $profile = Profile::where("user_id", "=", $user->id)->firstOrFail(); 
+            $profile = User::where("id", "=", $user->id)->firstOrFail(); 
 
             $comments_count = Wave::count("comments_count");
           
-            $follower = Follower::where("follower_id", "=", $user->id)->find('followed');
+            $follower = Follower::where("following_id", "=", $user->id)->find('followed');
 
             $waves = Wave::query( )
             ->join( 'users', 'waves.user_id', '=', 'users.id' )

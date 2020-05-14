@@ -35,7 +35,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Merriweather, serif;
   background-color: #708090;
   position: relative;
   padding-bottom: 58px;
@@ -55,7 +55,7 @@ header {
 }
 
 header h1 {
-  font-family: Merriweather, Helvetica, sans-serif;
+  font-family: Merriweather, serif;
   font-size: 15vh;
   margin: 30px;
   text-transform: uppercase;
@@ -81,11 +81,10 @@ nav {
 }
 
 .links>a {
-  color: #636b6f;
+  color: #00BFFF;
   padding: 0 25px;
-  font-size: 13px;
-  font-weight: 600;
-  
+  font-size: 15px;
+  font-weight: 580;
   letter-spacing: .1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -105,21 +104,26 @@ main {
   padding: 30px 20px;
 }
 
+.waver-a {
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+.waver-b {
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+}
+
 section {
   background-color: #fff;
   padding: 80px;
   margin-bottom: 30px;
   border-radius: 5px;
+  background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
 }
 
 section.wave.waver-images {
   padding: 0;
   padding-bottom: 40px;
   align-items: center;
-}
-
-section:last-child {
-  margin-bottom: 0;
 }
 
 section h2 {
@@ -132,6 +136,10 @@ section p {
   line-height: 24px;
 }
 
+section:last-child {
+  margin-bottom: 0;
+}
+
 footer {
   text-align: center;
   background-color: #333;
@@ -141,6 +149,37 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+
+@media screen and (max-width: 600px) {
+    body {
+        width: 100%;
+        font-size: 0.75em;
+    }
+    h1 {
+        font-size: 6vh;
+    }
+}
+
+@media(max-width:768px) {
+    main {
+        width: 100vw;
+        padding: 20px;
+    }
+    section {
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+    section h2 {
+        margin: 8px 0 15px 0;
+    }
+    section p {
+        margin-top: 16px;
+        line-height: 20px;
+    }
+}
+
+
 </style>
 
     </head>
@@ -173,8 +212,8 @@ footer {
                 <p>Waver is a new Social Network that works whenever you are. Waver Create wonderful experiences for the people, creating memories, making life easier and discover the new ways of life.</p>
                 <p>Waver brings you closer to home!</p>
                 <section class="waver-b">
-                    <h3>Why Join Waver?</h3>
-                    <p>Waver. A social media that connects you around the world! Share memories and laughter.</p>
+                    <h2>Why Join Waver?</h2>
+                    <p>Waver. A social media platform that connects you around the world! Share memories and laughter.</p>
                 </section>
              </section>
              <section class="waver-c">
@@ -193,7 +232,7 @@ footer {
                  </figure>
                </div>
              </section>
-             <section class="c-waver">
+             <section class="waver reg">
                <p><a href="{{ route('register') }}">Register Now!</a> Waver...Connecting People</p>
              </section>
         </main>

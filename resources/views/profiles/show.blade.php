@@ -39,6 +39,8 @@ Profile
                     <a href="{{ route( 'users.edit', $user->id) }}">Edit Profile</a>
                     @endif
 
+                    
+
                 </div>
             </div>
         </div>

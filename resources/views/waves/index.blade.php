@@ -24,7 +24,7 @@ Waver
         <div class="card-body"> 
             <li> 
                 @auth
-                <a href="{{ route('profiles.show', $wave->user_id) }}" class="text-dark" class="nav-link" >
+                <a href="{{ route('users.view', $wave->user_id) }}" class="text-dark" class="nav-link" >
                     <strong>{{ $wave->username }}</strong>
                 </a>
                 @endauth

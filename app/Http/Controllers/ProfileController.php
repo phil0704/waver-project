@@ -104,11 +104,10 @@ class ProfileController extends Controller
         ));
         $user = Auth::user();
 
-        $profile = Profile::where("user_id", "=", $user->id)->firstOrFail();
+        $profile =User::where("id", "=", $user->id)->firstOrFail();
 
-        $profile->user_id = $user->id;
-        $profile->username = $validatedData['username'];
-        $profile->profile_pic = 'profile_pic';
+        $profile->id = $user->id;
+       
         $profile->save();
         
     
@@ -145,7 +144,7 @@ class ProfileController extends Controller
             $user = User::findOrFail($id);
 
 
-            return view( 'profiles.edit', compact('') );
+            return view( 'profiles.edit', compact('user') );
         }
         return redirect('/waves');
     }
