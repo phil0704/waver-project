@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-  
+    <h3>Search for a Gif!</h3>
     <div class="columns">
       <form @submit="giphySearch" class="column is-one-fifth" action="#" method="GET">
         <div class="field">

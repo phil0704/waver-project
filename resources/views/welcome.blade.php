@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="waver logo"  type="company/images" href="{{ URL('/images/connecting-people.jpeg') }}">
+        <link rel="waver logo"  type="company/images" href="{{ URL('/images/waver-icon.png') }}">
         <meta name="description" content="A Waver app. Connecting to the World!">
         <title>Waver. Free Social Media</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
         <!-- Style -->
         <link type="text/css" rel="stylesheet" href="{{ asset('/css/app.css') }}" >
         <!-- Script -->
@@ -20,10 +20,132 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script> 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
          
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #708090;
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  align-items: center;
+  background-color: #B0C4DE;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 200px 80px;
+  height: 90vh;
+}
+
+header h1 {
+  font-family: Merriweather, Helvetica, sans-serif;
+  font-size: 15vh;
+  margin: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px gray;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: navy;
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255);
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.links>a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  height: 60px;
+  width: 60px;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+section {
+  background-color: #fff;
+  padding: 80px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+section.wave.waver-images {
+  padding: 0;
+  padding-bottom: 40px;
+  align-items: center;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+section h2 {
+  margin: 10px 0 25px 0;
+}
+
+section p {
+  font-size: 20px;
+  margin-top: 16px;
+  line-height: 24px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+</style>
+
     </head>
     <body>
-    <nav class="flex-center position-ref full-height">
+    <nav>
         <figure>
             <img src="../public/images/waver-icon.png" class="logo">
         </figure>
@@ -43,36 +165,40 @@
        </nav>
      
      <header>
-     <h1>Welcome to Waver. Connecting People</h1>
+     <h1>Welcome to Waver</h1>
      </header>
          <main>
-             <section class="a-waver">
-                <h3>What is all about Waver?</h3> 
+             <section class="waver-a">
+                <h2>What Is All About Waver?</h2> 
                 <p>Waver is a new Social Network that works whenever you are. Waver Create wonderful experiences for the people, creating memories, making life easier and discover the new ways of life.</p>
                 <p>Waver brings you closer to home!</p>
+                <section class="waver-b">
+                    <h3>Why Join Waver?</h3>
+                    <p>Waver. A social media that connects you around the world! Share memories and laughter.</p>
+                </section>
              </section>
-             <section class="b-waver">
-               <div id="c-waver">
-                 <figure class="col-1">
+             <section class="waver-c">
+               <div id="waver-images">
+                 <figure class="col1 pic">
                    <img src="./images/connecting-people.jpeg" alt="connecting people">
                  </figure>
-                 <figure class="col-2">
+                 <figure class="col2 pic">
                    <img src="./images/family-photo.jpg" alt="family-photo">
                  </figure>
-                 <figure class="col-3">
+                 <figure class="col3 pic">
                    <img src="./images/friends-photo.jpeg" alt="friends images">
                  </figure>
-                 <figure class="col-4">
+                 <figure class="col4 pic">
                    <img src="./images/videocalling.jpg" alt="family videocalling">
                  </figure>
                </div>
              </section>
              <section class="c-waver">
-               <p><a href="{{ route('register') }}">Register Now</a>Waver...Connecting People</p>
+               <p><a href="{{ route('register') }}">Register Now!</a> Waver...Connecting People</p>
              </section>
         </main>
      <footer>
-          <p>Waver.ConnectingtotheWorld! Registered TM. Copyright 2020</p> 
+          <p>Waver. Connecting People! Registered TM. Copyright 2020</p> 
      </footer> 
     </body>
 </html>

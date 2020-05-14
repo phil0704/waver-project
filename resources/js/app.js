@@ -9,6 +9,15 @@ window.ScrollMagic = require('scrollmagic');
 
 window.Vue = require('vue');
 
+// window.ScrollMagic = require('scrollmagic');
+// require('laravel-mix-scrollmagic-gsap');
+// mix.scrollmagicGSAP();
+
+console.log(typeof ScrollMagic);
+if(typeof ScrollMagic !== "undefined")
+require('./scripts.js');
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

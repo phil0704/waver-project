@@ -2193,7 +2193,8 @@ __webpack_require__.r(__webpack_exports__);
   props: ['wave', 'liked'],
   data: function data() {
     return {
-      isLiked: ''
+      isLiked: '',
+      likeCount: ''
     };
   },
   mounted: function mounted() {
